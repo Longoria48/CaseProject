@@ -1,0 +1,1 @@
+The textbook directs students to use the Chapter 9 case study files as a starting point to allow instructors flexibility in assigning chapters. For completeness, these solution files use the Chapter 12 case study files as a base. 
