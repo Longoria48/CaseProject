@@ -6,12 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The veterinary professionals at Fish Creek Animal Clinic care about your pet and will provide a comfortable environment for their medical needs.">
 <link href="style/fishcreek.css" rel="stylesheet">
-<script src="script/index.js" defer></script>
+<script src="script/script.js" defer></script>
 </head>
 <body>
 <div id="wrapper">
   <header>
     <h1><a href="index.html">Fish Creek Animal Clinic</a></h1>
+    <h2 id="greeting">Hello customer</h2>
   </header>
   <nav>
     <ul>
@@ -26,8 +27,10 @@
     <h2>Contact Fish Creek</h2>
     <p>Fill out the form below to contact Fish Creek. All information is required. </p>
 <form method="post" action="https://webdevbasics.net/scripts/fishcreek.php">
-<label for="myName">Name: </label>
-<input type="text" id="myName" name="myName" required>
+<label for="myFirstName">First Name: </label>
+<input type="text" id="myFirstName" name="myFirstName" required> <!-- requires myFirstName, myLastName, myEmail, MyReasons, MyComments to be filled!-->
+<label for="myLastName">Last Name: </label>
+<input type="text" id="myLastName" name="myLastName" required>
 <label for="myEmail">E-mail: </label>
 <input type="email" id="myEmail" name="myEmail" required>
 <label for="myReason">Reason for Contact: </label>

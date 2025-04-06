@@ -7,7 +7,7 @@ body { background-color: #5280C5;
 #wrapper { background-color: #F0F0F0;
 }
 header { background-color: #000066;
-         background-image: url(lilfish.gif);
+         background-image: url(/images/lilfish.gif);
 		 background-position: center;
 		 background-repeat: no-repeat;
 		 color: #F0F0F0;
@@ -101,7 +101,7 @@ h1 { animation: fadein 5s ease-out; animation-fill-mode: forwards;}
 .shop img { float: right; }
 .shop form { clear: right; }
 @media (min-width: 600px) { 
-		header { background-image: url(bigfish.gif); }
+		header { background-image: url(/images/bigfish.gif); }
 		h1        { font-size: 3em; }
 		nav ul   { flex-direction: row;
 		        flex-wrap: nowrap;
