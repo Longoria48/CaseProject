@@ -29,12 +29,12 @@ function validateName()
 
   if(digits.test(firstName)) //The test() method tests for a match in a string. https://www.w3schools.com/jsref/jsref_regexp_test.asp
   {
-    document.getElementById("myFirstName").value = "Cannot contain numbers";
+    document.getElementById("myFirstName").setCustomValidity("Cannot contain numbers");
     return false; // stop submission
   }
   else if(digits.test(lastName))
   {
-    document.getElementById("myLastName").value = "Cannot contain numbers";
+    document.getElementById("myLastName").setCustomValidity("Cannot contain numbers");
     return false;
   }
   else
@@ -44,3 +44,23 @@ function validateName()
 }
 document.getElementById("myFirstName").addEventListener("input",validateName);
 document.getElementById("myLastName").addEventListener("input",validateName);
+
+
+//Verify email entered by user is not an AOL email using RegExp
+function validateEmail()
+{
+  let customerEmail = document.getElementById("myEmail").value;
+  let RegExp = /\baol.com\b/;
+
+  if(RegExp.test(customerEmail))
+  {
+    document.getElementById("myEmail").setCustomValidity("aol.com emails are not accepted");
+    return false;
+  }
+  else
+  {
+    return true;
+  }
+
+}
+document.getElementById("myEmail").addEventListener("input",validateEmail);
