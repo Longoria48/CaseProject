@@ -64,5 +64,3 @@ function validateEmail()
 
 }
 document.getElementById("myEmail").addEventListener("input",validateEmail);
-
-//adding a testing line
