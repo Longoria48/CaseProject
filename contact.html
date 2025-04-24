@@ -7,6 +7,8 @@
 <meta name="description" content="The veterinary professionals at Fish Creek Animal Clinic care about your pet and will provide a comfortable environment for their medical needs.">
 <link href="style/fishcreek.css" rel="stylesheet">
 <script src="script/script.js" defer></script>
+<script src="script/map.js" defer></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyA4-a0-Cky31xCiqy6oty-oRzoZDxLqg&callback=initMap"></script> 
 </head>
 <body>
 <div id="wrapper">
@@ -46,6 +48,13 @@
 <textarea name="myComments" id="myComments" rows="2" cols="20" required></textarea>
 <input type="submit" id="mySubmit" value="Send Now">
 </form>
+  <div id="displayMap"></div>
+  <div id="trackingYou">
+    <p>Latitude: <span id="latitude"></span></p>
+    <p>Longitude: <span id="longitude"></span></p>
+    <p>Altitude: <span id="altitude"></span></p>
+  </div>
+  <div id="routeBox"></div>
   </main>
   <footer>
 Copyright &copy; 2020 Fish Creek Animal Clinic<br>

@@ -18,6 +18,8 @@ let shoppingCart = {
 
         //Update the total with the item price
         this.total += item.price;
+
+        cart.total = this.total;
     },
     showCart: function()        //method to display the contents of the cart to the user
     {
@@ -27,10 +29,10 @@ let shoppingCart = {
         for(let i=0; i<this.merchArray.length; i++)
         {
             //custom msg to keep track of #items in cart as well as display properties of item to user
-            alertMsg += "["+i+1+"]" + this.merchArray.name + " $" + this.merchArray.price + " - " + this.merchArray.description;
+            alertMsg += "["+i+1+"] " + this.merchArray[i].name + " $" + this.merchArray[i].price + " - " + this.merchArray[i].description+"\n";
         }
         //Include total in the alert outside of for loop
-        alertMsg += "Total: $" + this.total.toFixed(2);
+        alertMsg += "Total: $" + cart.total.toFixed(2);
 
         //return the full concatonated string
         return alertMsg;

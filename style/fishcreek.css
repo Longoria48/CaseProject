@@ -91,6 +91,41 @@ form { display: flex;
          padding-left: 1em; width: 80%; }
 input, textarea { margin-bottom: .5em; }
 
+ /* Map Styles */
+ 
+ div#displayMap {
+    width: 40%;
+    padding-bottom: 30%;
+    height: 0;
+    margin: 20px auto;
+    border: 2px solid #AEC3E3;
+	background-color: #EAEAEA;
+	box-shadow: 3px 3px 6px #CCC;
+ }
+ 
+ div#displayMap2 {
+   width: 40%;
+   padding-bottom: 30%;
+   height: 0;
+   margin: 20px auto;
+   border: 2px solid #AEC3E3;
+   background-color: #EAEAEA;
+   box-shadow: 3px 3px 6px #CCC;
+}
+ div#routeBox {
+    width: 70%;
+    margin: 10px auto;
+    min-height: 50px;
+    border: 2px solid #AEC3E3;
+	background-color: #FFF;
+	color: #003366;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.1em;
+    text-align: center;
+	padding: 1em;
+	box-shadow: 2px 2px 5px #BBB;
+ }
+
 @keyframes fadein { 
        0% { opacity: 0; }
        100%   { opacity: 1;  }
