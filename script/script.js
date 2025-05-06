@@ -64,3 +64,33 @@ function validateEmail()
 
 }
 document.getElementById("myEmail").addEventListener("input",validateEmail);
+
+let submitBtn = document.getElementById("mySubmit");
+let zip = document.getElementById("zipcode");
+
+//function to validate the zipcode entered by a customer
+zip.onchange = function()
+{
+  let codeValue = zip.value;
+
+  let xhr = new XMLHttpRequest();
+  let url = `http://api.zippopotam.us/us/${codeValue}`
+
+  xhr.onreadystatechange = function()
+  {
+    if(xhr.readyState === 4 && xhr.status === 200)  //if successful request
+    {
+      let json = JSON.parse(xhr.response);
+      zip.value = json.places[0]["place name"];
+      zip.setCustomValidity("");  //clear the error
+      return true;
+    }
+    else
+    {
+      zip.setCustomValidity("Invalid zipcode"); //Show error to user if invalid zip
+      return false;
+    }
+  }
+  xhr.open("GET", url, true);
+  xhr.send();
+}

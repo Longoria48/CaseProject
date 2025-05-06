@@ -45,7 +45,7 @@ function initMap() {
       else
       {
          //otherwise let the user know their device doesn't support it
-         alert("Altitude feature not available on this device");
+         document.getElementById("altitude").textContent = "Altitude feature not available on this device";
       }
 
       console.log(myPosition);
